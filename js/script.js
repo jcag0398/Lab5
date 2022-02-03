@@ -1,12 +1,7 @@
-let post = $("#ButtonPost")
-let clear = $("#ButtonClear")
-let mark = $("#ButtonMark")
-let del = $("#ButtonDelete")
-
-postButton.on("click", TodoPost);
-clearButton.on("click", clearTodos);
-markButton.on("click", markTodos);
-deleteButton.on("click", deleteTodos);
+let post = $("#postButton")
+let clear = $("#clearButton")
+let mark = $("#markButton")
+let del = $("#delButton")
 
 function TodoPost(e){
     e.preventDefault()
@@ -49,3 +44,8 @@ function TodoDel(){
         }
     })
 }
+
+post.on("click", TodoPost);
+clear.on("click", TodoClear);
+mark.on("click", TodoMark);
+del.on("click", TodoDel);
